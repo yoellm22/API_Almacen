@@ -12,18 +12,6 @@ require 'vendor/autoload.php';
 
 $conn = Conexion::getPDO();
 
-/**Conexion a BBDD**/
-function getConnection() {
-    $dbhost="127.0.0.1";
-    $dbuser="root";
-    $dbpass="";
-    $dbname="inventariodb";
-    $dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    return $dbh;
-}
-/**Fin conexion a BBDD**/
-
 $app = new \Slim\App();
 
 
